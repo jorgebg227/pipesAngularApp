@@ -1,0 +1,103 @@
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p>
+        Pipes incluidos en Angular - Usualmente en el Common Module.
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="uppercase"
+                [subheader]="nombreLower">
+            {{ nombreLower | uppercase }}
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card header="lowercase"
+                [subheader]="nombreUpper">
+            {{ nombreUpper | lowercase }}
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card header="titlecase"
+                [subheader]="nombreCompleto">
+            {{ nombreCompleto | titlecase }}
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipes para mostrar las fechas
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-6">
+        <p-card>
+            <strong>Fechas formateadas</strong><span> / Instrucción</span>
+            <ul>
+                <li> fecha </li>
+                <li> fecha | date </li>
+                <li> fecha | date:'short' </li>
+                <li> fecha | date:'long' </li>
+                <li> fecha | date:'dd-LL-yyyy HH:mm:ss' </li>
+                <li> fecha | date:'dd, MMMM, yyyy' </li>
+            </ul>
+            
+            <hr>
+            
+            <strong>Gambiar GMT</strong><span> / Instrucción</span>
+            <ul>
+                <li> fecha | date:'long':'GMT-3' </li>
+                <li> fecha | date:'long':'GMT-2' </li>
+                <li> fecha | date:'long':'GMT-1' </li>
+                <li> fecha | date:'long':'GMT' </li>
+                <li> fecha | date:'long':'GMT+1' </li>
+                <li> fecha | date:'long':'GMT+2' </li>
+                <li> fecha | date:'long':'GMT+3' </li>
+            </ul>
+            
+            <strong>Gambiar Idioma Fecha</strong><span> / Instrucción (hay que importarlos antes)</span>
+            <ul>
+                <li> fecha | date:'full':'':'en' (en Inglés)</li>
+                <li> fecha | date:'full':'':'es' (en Español)</li>
+                <li> fecha | date:'full':'':'fr' (en Frances)</li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="p-col-6">
+        <p-card>
+            <span>Resultado</span>
+            <ul>
+                <li>{{ fecha }}</li>
+                <li>{{ fecha | date }}</li>
+                <li>{{ fecha | date:'short' }}</li>
+                <li>{{ fecha | date:'long' }}</li>
+                <li>{{ fecha | date:'dd-LL-yyyy HH:mm:ss' }}</li>
+                <li>{{ fecha | date:'dd, MMMM, yyyy' }}</li>
+            </ul>
+            
+            <hr>
+            
+            <span>Resultado</span>
+            <ul>
+                <li>{{ fecha | date:'long':'GMT-3' }}</li>
+                <li>{{ fecha | date:'long':'GMT-2' }}</li>
+                <li>{{ fecha | date:'long':'GMT-1' }}</li>
+                <li>{{ fecha | date:'long':'GMT' }}</li>
+                <li>{{ fecha | date:'long':'GMT+1' }}</li>
+                <li>{{ fecha | date:'long':'GMT+2' }}</li>
+                <li>{{ fecha | date:'long':'GMT+3' }}</li>
+            </ul>
+            
+            <span>Resultado</span>
+            <ul>
+                <li>{{ fecha | date:'full':'':'en' }}</li>
+                <li>{{ fecha | date:'full':'':'es' }}</li>
+                <li>{{ fecha | date:'full':'':'fr' }}</li>
+            </ul>
+        </p-card>
+    </div>
+</div>

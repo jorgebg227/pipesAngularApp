@@ -1,0 +1,28 @@
+<div class="text-layout">
+    <h1>DecimalPipe y Porcentaje</h1>
+    <p>
+        Pipes incluidos en Angular - Usualmente en el Common Module.
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="number"
+                subheader="Toda la parte entera (1) y solo dos decimales (2-2)">
+            {{ (ventasNetas + 100000000) | number:'1.2-2' }}
+            <i class="pi pi-euro"></i>
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card header="currency"
+                subheader="Simbolo de la moneda y toda la parte entera (1) con de 0 a 4 decimales (0-4)">
+            {{ (ventasNetas + 200000000) | currency:'EUR':'symbol-narrow':'1.0-4' }}
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card header="percent"
+                subheader="Toda la parte entera (1) y solo dos decimales (2-2)">
+            {{ porcentaje | percent:'1.2-2' }}
+        </p-card>
+    </div>
+</div>
